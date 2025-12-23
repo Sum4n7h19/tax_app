@@ -1,5 +1,10 @@
-import AssessTaxView from "./AssessTaxView";
+import { Suspense } from "react";
+import AssessTaxClient from "./AssessTaxView";
 
 export default function Page() {
-  return <AssessTaxView />;
+  return (
+    <Suspense fallback={<div>Loading tax details…</div>}>
+      <AssessTaxClient />
+    </Suspense>
+  );
 }
