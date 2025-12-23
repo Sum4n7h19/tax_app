@@ -462,9 +462,22 @@ export default function MapView() {
             <option value="CornerSite">Corner Site</option>
           </select>
         </div>
-        <img src="/MIT.jpg" alt="logo" style={{ width: "60%", height: "auto", marginLeft: "20%", marginTop: "50px" }} />
+        <img src="/MIT.jpg" alt="logo" style={{ width: "60%", height: "auto", marginLeft: "20%", marginTop: "30px" }} />
         <h1 style={{ fontSize: "24px", fontWeight: "bold", color: "black", alignItems: "center", textAlign: "center" }}>Maharaja Institute of Technology</h1>
         <h2 style={{ fontSize: "20px", fontWeight: "bold", color: "black", alignItems: "center", textAlign: "center" }}>Mysore</h2>
+
+        <div>
+          <p style={{ fontSize: "16px", color: "black", textAlign: "left", marginTop: "20px", fontWeight: "bold" }}>Developed by:</p>
+          <p style={{ fontSize: "14px", color: "black", textAlign: "left" }}>1. Hamsini P N</p>
+          <p style={{ fontSize: "14px", color: "black", textAlign: "left" }}>2. Chiranth S</p>
+          <p style={{ fontSize: "14px", color: "black", textAlign: "left" }}>3. Aayush C</p>
+          <p style={{ fontSize: "14px", color: "black", textAlign: "left" }}>4. Prajwal K M</p>
+          <p style={{ fontSize: "14px", color: "black", textAlign: "left" }}>Department of Civil Engineering</p>
+          <br />
+          <p style={{ fontSize: "16px", color: "black", textAlign: "left", fontWeight: "bold" }}>Under the Guidance of</p>
+          <p style={{ fontSize: "14px", color: "black", textAlign: "left" }}>Prof Ravikiran L</p>
+          <p style={{ fontSize: "14px", color: "black", textAlign: "left" }}>Department of Civil Engineering</p>
+        </div>
       </div>
 
 
