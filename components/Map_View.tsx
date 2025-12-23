@@ -161,7 +161,7 @@ function MeasureControl() {
         map.removeControl(controlRef.current);
         controlRef.current = null;
       }
-      map.setMaxBounds(null); // Ensure lock is removed
+     // map.setMaxBounds(null); // Ensure lock is removed
 
       // Re-enable interactions just in case
       map.dragging.enable();
