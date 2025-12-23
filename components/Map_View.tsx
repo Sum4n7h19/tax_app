@@ -120,7 +120,7 @@ function MeasureControl() {
       // 🔓 back to normal
       enableInteractions = () => {
         // 1. Remove the max bounds lock
-        map.setMaxBounds(null);
+        // map.setMaxBounds(null);
 
         // Re-enable all controls
         map.dragging.enable();
