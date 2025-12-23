@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+@import "leaflet/dist/leaflet.css";
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+#root,
+#__next {
+  height: 100%;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +40,232 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page background just for this tool */
+.ptax-page {
+  min-height: 100vh;
+  background: #bababa;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: #000;
+}
+
+/* Main white card */
+.ptax-container {
+  width: 100%;
+  max-width: 1250px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  color: #000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  font-family:'Times New Roman', Times, serif;
+}
+
+/* Headings */
+.ptax-container h1 {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* Sections */
+.section {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  padding: 15px;
+  font-weight: 200;
+  border-radius: 8px;
+  margin-top: 15px;
+  color: #000;
+}
+
+/* Rows */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Labels */
+label {
+  width: 260px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Inputs & selects */
+input[type="number"],
+input[type="text"],
+select {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  background: #fff;
+  color: #000;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: white;
+  color: #000;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: left;
+}
+
+th {
+  background: #efefef;
+  font-weight: bold;
+}
+
+/* Serial indicators */
+.serial {
+  font-weight: 700;
+  color: #003366;
+  margin-right: 8px;
+}
+
+/* Computed blocks */
+.computed {
+  background: #fffce7;
+  border: 1px solid #f6eed9;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #666;
+  background: white;
+  cursor: pointer;
+  color: #000;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: #005bbb;
+  color: white;
+  border-color: #004a96;
+}
+
+/* Muted / small text */
+.muted {
+  text-align: center;
+  font-size: 32px;
+  color: #000 !important;
+}
+
+.small {
+  font-size: 18px;
+  font-weight: 200;
+  color: #000;
+}
+
+/* 2-column layout */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Validation */
+.ok {
+  color: #008000;
+  font-weight: 700;
+}
+
+.error {
+  color: #cc0000;
+  font-weight: 700;
+}
+
+/* Print layout (for Export -> PDF) */
+@media print {
+  body {
+    background: #ffffff !important;
+  }
+
+  .ptax-page {
+    background: #ffffff !important;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .ptax-container {
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* Hide buttons when printing */
+  .btn {
+    display: none;
+  }
+}
+
+/* Light grey, disabled-looking section for vacant plots */
+.section-disabled {
+  opacity: 0.5;
+  pointer-events: none;      /* prevent clicking inside */
+}
+
+/* Optional: keep the title readable */
+.section-disabled h2 {
+  opacity: 1;
+}
+
+/* ================================
+   Leaflet Measure – FORCE BLACK TEXT
+   ================================ */
+
+/* Main measure panel */
+.leaflet-control-measure,
+.leaflet-control-measure * {
+  color: #000 !important;
+}
+
+/* Result popup box */
+.leaflet-measure-resultpopup,
+.leaflet-measure-resultpopup * {
+  color: #000 !important;
+  background: #ffffff !important;
+}
+
+/* Blue highlighted rows (last point, distance, coords) */
+.leaflet-measure-resultpopup div,
+.leaflet-measure-resultpopup span,
+.leaflet-measure-resultpopup strong {
+  color: #000 !important;
+}
+
+/* Buttons: Cancel / Finish measurement */
+.leaflet-measure-resultpopup a {
+  color: #000 !important;
+  font-weight: 500;
+}
+
+/* Fix selected / highlighted text blocks */
+.leaflet-measure-resultpopup .leaflet-measure-result {
+  color: #000 !important;
+}
+
+/* Tooltip text */
+.leaflet-control-measure-toggle {
+  color: #000 !important;
 }
